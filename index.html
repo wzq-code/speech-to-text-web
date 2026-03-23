@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>语音转文字</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel">
+        <p class="eyebrow">Speech To Text</p>
+        <h1>实时语音转文字</h1>
+        <p class="description">
+          点击按钮开始录音，系统会在你说话时持续把语音识别结果展示在页面中。
+        </p>
+
+        <div class="controls">
+          <button id="toggleButton" class="toggle-button" type="button">
+            开始录音
+          </button>
+          <span id="status" class="status idle">未录音</span>
+        </div>
+
+        <div class="transcript-card">
+          <div class="transcript-header">
+            <h2>识别结果</h2>
+            <button id="clearButton" class="clear-button" type="button">
+              清空
+            </button>
+          </div>
+          <p id="placeholder" class="placeholder">
+            录音开始后，文字会实时显示在这里。
+          </p>
+          <div id="transcript" class="transcript" aria-live="polite"></div>
+        </div>
+
+        <p id="supportMessage" class="support-message" hidden></p>
+      </section>
+    </main>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
